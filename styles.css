@@ -44,10 +44,19 @@ header .logo img:hover {
     transform: scale(1.1);
 }
 
+/* Menu Horizontal - Alterações principais aqui */
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
 }
 
 nav ul li a {
@@ -55,6 +64,9 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    padding: 5px 10px;
+    display: inline-block;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
 }
 
 nav ul li a:hover {
@@ -320,18 +332,22 @@ footer p {
     color: #ff0000;
 }
 
-/* Responsividade */
+/* Responsividade - Alterações principais aqui */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: row; /* Mantém horizontal */
+        padding: 10px 15px;
+        flex-wrap: wrap;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Mantém horizontal */
         gap: 10px;
+        flex-wrap: wrap; /* Permite quebrar linha se necessário */
+        justify-content: center;
     }
 
+    /* Restante mantido igual */
     .servicos-container {
         flex-direction: column;
     }
