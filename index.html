@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Malibu Automotiva - Excelência em pintura automotiva e personalização de veículos.">
+    <meta name="keywords" content="pintura automotiva, reparação de arranhões, personalização de veículos">
     <title>Malibu Automotiva</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,51 +13,77 @@
     <!-- Cabeçalho -->
     <header id="header">
         <div class="logo">
-    
+            <!-- Espaço para logo -->
         </div>
-        <nav>
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-menu">
+            <button class="close-menu" aria-label="Fechar menu">
+                <i class="fas fa-times"></i>
+            </button>
             <ul>
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#referencias">Referências</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#hero" class="nav-link">Início</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#referencias" class="nav-link">Referências</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seção Hero (Apresentação) -->
+    <!-- Seção Hero -->
     <section id="hero">
         <div class="hero-content">
             <div class="logo-centralizada">
                 <img src="logocentro.png" alt="Malibu Automotiva">
             </div>
             <h1>Malibu Reparação Automotiva</h1>
-            <p>Excelência em pintura automotiva e personalização de veículos.</p>
+            <p>Atendemos aos fins de semana e feriados mediante agendamento.</p>
             <a href="#servicos" class="btn">Conheça nossos serviços</a>
+
         </div>
     </section>
 
-    <!-- Seção Serviços -->
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <div class="servicos-container">
-            <div class="servico">
-                <i class="fas fa-paint-roller"></i>
-                <h3>Pintura Completa</h3>
-                <p>Pintura profissional para veículos, com acabamento impecável.</p>
-            </div>
-            <div class="servico">
-                <i class="fas fa-car"></i>
-                <h3>Reparação de Arranhões</h3>
-                <p>Remoção de arranhões e imperfeições na pintura.</p>
-            </div>
-            <div class="servico">
-                <i class="fas fa-tools"></i>
-                <h3>Personalização</h3>
-                <p>Transforme seu veículo com designs exclusivos.</p>
-            </div>
+   <!-- Seção Serviços -->
+<section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="servicos-container">
+        <!-- Serviço 1 -->
+        <div class="servico">
+            <i class="fas fa-spray-can" title="Pistola de Pintura"></i>
+            <h3>Pintura Completa</h3>
+            <p>Pintura profissional para veículos, com acabamento impecável.</p>
         </div>
-    </section>
+
+        <!-- Serviço 2 -->
+        <div class="servico">
+            <i class="fas fa-car"></i>
+            <h3>Reparação de Arranhões</h3>
+            <p>Remoção de arranhões e imperfeições na pintura.</p>
+        </div>
+
+        <!-- Serviço 3 -->
+        <div class="servico">
+            <i class="fas fa-tools"></i>
+            <h3>Polimento</h3>
+            <p>Acabamento preciso, cor de fábrica.</p>
+        </div>
+
+        <!-- Serviço 4 (Martelinho de Ouro) -->
+        <div class="servico">
+            <i class="fas fa-hammer" title="Martelinho de Ouro"></i>
+            <h3>Martelinho de Ouro</h3>
+            <p>Removemos amassados sem danificar a pintura original.</p>
+        </div>
+
+        <!-- Serviço 5 (Funilaria Artesanal) -->
+        <div class="servico">
+            <i class="fas fa-car-crash" style="color: #e74c3c;"></i>
+            <h3>Funilaria Artesanal</h3>
+            <p>Recuperamos a estrutura e aparência do seu veículo com técnicas detalhadas.</p>
+        </div>
+    </div> <!-- Fecha servicos-container -->
+</section>
 
     <!-- Seção Referências -->
     <section id="referencias">
@@ -63,15 +91,15 @@
         <div class="carrossel-container">
             <div class="carrossel">
                 <div class="carrossel-item">
-                    <img src="foto1.jpg" alt="Trabalho 1">
+                    <img src="foto1.jpg" alt="Pintura de um Golf - Antes e depois">
                     <p>Pintura de um Golf.</p>
                 </div>
                 <div class="carrossel-item">
-                    <img src="foto2.jpg" alt="Trabalho 2">
+                    <img src="foto2.jpg" alt="Resultado pintura Dodge Journey">
                     <p>Resultado pintura Dodge Journey.</p>
                 </div>
                 <div class="carrossel-item">
-                    <img src="foto3.jpg" alt="Trabalho 3">
+                    <img src="foto3.jpg" alt="Antes e depois Astra">
                     <p>Antes e depois Astra.</p>
                 </div>
             </div>
@@ -84,14 +112,15 @@
     <section id="contato">
         <h2>Contato</h2>
         <p>Entre em contato conosco para mais informações ou agendar um serviço.</p>
+
         <div class="social-buttons">
-            <a href="https://wa.me/5511972439954" target="_blank" class="whatsapp-button">
+            <a href="https://wa.me/5511972439954" target="_blank" class="social-button whatsapp-button">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <a href="https://www.instagram.com/flavio.malibu?igsh=MWdrNXZubmN3d2Vkcg==" target="_blank" class="instagram-button">
+            <a href="https://www.instagram.com/flavio.malibu?igsh=MWdrNXZubmN3d2Vkcg==" target="_blank" class="social-button instagram-button">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
-            <a href="https://www.tiktok.com/@malibu1977lima?_t=ZM-8uMRp3MifET&_r=1" target="_blank" class="tiktok-button">
+            <a href="https://www.tiktok.com/@malibu1977lima?_t=ZM-8uMRp3MifET&_r=1" target="_blank" class="social-button tiktok-button">
                 <i class="fab fa-tiktok"></i> TikTok
             </a>
         </div>
@@ -102,7 +131,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Malibu Automotiva. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Malibu Reparação Automotiva. Todos os direitos reservados.</p>
         <div class="social-icons">
             <a href="https://www.instagram.com/flavio.malibu?igsh=MWdrNXZubmN3d2Vkcg=="><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/seufacebook"><i class="fab fa-facebook"></i></a>
