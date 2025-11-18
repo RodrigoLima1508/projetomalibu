@@ -1,4 +1,4 @@
-css malibu /* Reset básico */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@ header .logo img:hover {
     transform: scale(1.1);
 }
 
-/* Menu Horizontal - Alterações principais aqui */
+/* Menu Horizontal */
 nav ul {
     list-style: none;
     display: flex;
@@ -66,7 +66,7 @@ nav ul li a {
     transition: color 0.3s;
     padding: 5px 10px;
     display: inline-block;
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -183,16 +183,20 @@ nav ul li a:hover {
     position: relative;
     width: 80%;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: hidden; /* ESSENCIAL para esconder slides */
 }
 
 .carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    /* CORREÇÃO PRINCIPAL: 8 itens * 100% de largura do container */
+    width: 800%; 
 }
 
 .carrossel-item {
-    min-width: 100%;
+    /* CORREÇÃO: 100% da largura do .carrossel (que é 800%) */
+    flex: 0 0 100%; 
+    min-width: 100%; /* Mantido por segurança */
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -332,22 +336,21 @@ footer p {
     color: #ff0000;
 }
 
-/* Responsividade - Alterações principais aqui */
+/* Responsividade */
 @media (max-width: 768px) {
     header {
-        flex-direction: row; /* Mantém horizontal */
+        flex-direction: row;
         padding: 10px 15px;
         flex-wrap: wrap;
     }
 
     nav ul {
-        flex-direction: row; /* Mantém horizontal */
+        flex-direction: row;
         gap: 10px;
-        flex-wrap: wrap; /* Permite quebrar linha se necessário */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
-    /* Restante mantido igual */
     .servicos-container {
         flex-direction: column;
     }
