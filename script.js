@@ -1,5 +1,3 @@
-js malibu 
-
 // Menu Estático
 let ultimaPosicaoScroll = window.scrollY;
 const header = document.getElementById('header');
@@ -40,6 +38,7 @@ btnVoltarTopo.addEventListener('click', () => {
 
 // Carrossel de Referências
 document.addEventListener('DOMContentLoaded', function() {
+    // A variável 'carrossel' seleciona o elemento que deve ser movido (o "track")
     const carrossel = document.querySelector('.carrossel');
     const btnAnterior = document.querySelector('.carrossel-btn.anterior');
     const btnProximo = document.querySelector('.carrossel-btn.proximo');
@@ -47,16 +46,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let index = 0;
 
     function mostrarItem(indice) {
+        // Calcula o deslocamento em porcentagem (ex: 0%, -100%, -200%, etc.)
         const offset = -indice * 100;
+        // Aplica o deslocamento horizontal no .carrossel
         carrossel.style.transform = `translateX(${offset}%)`;
     }
 
     btnAnterior.addEventListener('click', () => {
+        // Volta para o último item se estiver no primeiro
         index = (index > 0) ? index - 1 : itens.length - 1;
         mostrarItem(index);
     });
 
     btnProximo.addEventListener('click', () => {
+        // Volta para o primeiro item se estiver no último
         index = (index < itens.length - 1) ? index + 1 : 0;
         mostrarItem(index);
     });
